@@ -1,0 +1,211 @@
+/* Form */
+body {
+  background: rgb(201, 223, 223);
+}
+.decor {
+  position: relative;
+  max-width: 450px;
+  margin: 50px auto 0;
+  background: white;
+  border-radius: 30px;
+}
+.form-left-decoration, .form-right-decoration {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: rgb(201, 223, 223);
+  border-radius: 20px;
+}
+.form-left-decoration {
+  bottom: 60px;
+  left: -30px;
+}
+.form-right-decoration {
+  top: 60px;
+  right: -30px;
+}
+.form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  background: white;
+}
+.form-left-decoration:before {
+  top: -20px;
+}
+.form-left-decoration:after {
+  top: 20px;
+  left: 10px;
+}
+.form-right-decoration:before {
+  top: -20px;
+  right: 0;
+}
+.form-right-decoration:after {
+  top: 20px;
+  right: 10px;
+}
+.circle {
+  position: absolute;
+  bottom: 80px;
+  left: -55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+}
+.form-inner {
+  padding: 50px;
+}
+.form-inner>input, .inputFile, .select-option, .select, .form-inner textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+  margin-top: 30px;
+  background: #41cbdd;
+  border-bottom: 4px solid rgb(201, 223, 223);
+  color: white;
+  font-size: 14px;
+}
+.form-inner input[type="submit"]:active {
+  border-top: 4px solid white;
+  border-bottom: 0px solid rgb(201, 223, 223);
+  color: white;
+}
+.form-inner input[type="submit"]:disabled {
+  border-top: 0px solid white;
+  border-bottom: 4px solid rgb(201, 223, 223);
+  color: rgb(29, 23, 23);
+  background: #c3c8c9;
+}
+.inputFile, .form-inner input[type="submit"], .select-option, .select {
+  cursor: pointer;
+}
+.select {
+  height: 40px;
+}
+.form-inner textarea {
+  resize: none;
+}
+.form-inner h3 {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #707981;
+}
+
+.savedDataText {
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+
+/* Radio and Checkout */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins'}
+.content{
+  margin: auto;
+  padding: 15px;
+  max-width: 800px;
+  text-align: center;
+}
+.dpx{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+h1{
+  font-size:28px;
+  line-height:28px;
+  margin-bottom:15px;
+}
+label{
+  display:block;
+  line-height:40px;
+}
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  width: 40px;
+  height: 40px;
+  display:flex;
+  content: '\2714';
+  font-size: 25px;
+  font-weight:bold;
+  position: absolute;
+  align-items:center;
+  justify-content:center;
+  font-family:'Font Awesome 5 Free';
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
