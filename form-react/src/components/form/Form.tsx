@@ -1,9 +1,7 @@
-// import React from 'react';
 import styles from './Form.module.scss';
-
 import * as React from 'react';
-// import './Form.css';
-// import { CardsStateForm, IObjDataForm, IPropsForm } from '../../interface/interface';
+import './Form.css';
+
 export class Form extends React.Component<any, any> {
   private refForm: React.RefObject<HTMLFormElement>;
 
