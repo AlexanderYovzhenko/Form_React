@@ -1,4 +1,3 @@
-import styles from './Form.module.scss';
 import * as React from 'react';
 import './Form.css';
 
