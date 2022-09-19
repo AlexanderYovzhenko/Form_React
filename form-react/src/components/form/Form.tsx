@@ -4,6 +4,7 @@ import './Form.css';
 
 const Form = () => {
   const [userName, setUserName] = React.useState('');
+  const [email, setEmail] = React.useState('');
 
   const validUserName = () => {
     let arrNames = [];
@@ -15,7 +16,14 @@ const Form = () => {
       
     }
   };
-  
+
+  const validEmail = () => {
+    const reEmail = /^[a-zA-Z_.-@]{5,30}$/;
+    if (!reEmail.test(email)) {
+      
+    }
+  };
+
 
   return (
     <section>
@@ -37,10 +45,16 @@ const Form = () => {
             value={userName} 
             onChange={(input) => {
               setUserName(input.target.value.toUpperCase())
-              validUserName()
+              validEmail()
             }} 
           />
-          <input type="email" placeholder="E-mail" name="Email" />
+          <input type="email" placeholder="E-mail" name="Email"
+            value={email}
+            onChange={(input) => {
+              setEmail(input.target.value.toUpperCase())
+              validUserName()
+            }}  
+          />
           <input type="tell" placeholder="Номер телефона" name="Phone" />
           <input type="date" placeholder="Дата рождения" name="Date" />
           <textarea placeholder="Сообщение" name="Message"></textarea>
