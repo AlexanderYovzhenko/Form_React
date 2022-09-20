@@ -29,9 +29,9 @@ const Form = () => {
     <section>
       <form
         className="decor"
-        // onSubmit={this.handleSubmit}
-        // ref={this.refForm}
-        // onChange={this.handleChange}
+        // onSubmit={handleSubmit}
+        // ref={refForm}
+        // onChange={handleChange}
       >
         <div className="form-left-decoration"></div>
         <div className="form-right-decoration"></div>
